@@ -1,0 +1,12 @@
+# ByteTrack config - FAR (small/distant pedestrians)
+tracker_type: bytetrack
+
+track_high_thresh: 0.35        # 初次匹配的分數閾值（低於預設，適合小框）
+track_low_thresh: 0.05         # 最低追蹤閾值
+new_track_thresh: 0.28         # 新增追蹤允許的最低偵測分數
+track_buffer: 45               # 追蹤丟失後可保留幀數（越大越耐遮擋）
+match_thresh: 0.75              # IoU 閾值稍微放寬，避免小框漏配
+fuse_score: true                # 啟用偵測分數融合
+
+# min_box_area: 10              # 最小框面積（如需過濾小框可開啟）
+# mot20: false                   # MOT20 特殊設定（預設關閉）
